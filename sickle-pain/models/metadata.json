@@ -1,0 +1,92 @@
+{
+  "project_title": "Ensemble Machine Learning Approach for Predicting Pain Severity in Sickle Cell Disease",
+  "best_model_name": "Stacking Ensemble",
+  "target_column": "Pain_Class",
+  "class_names": [
+    "Mild",
+    "Moderate",
+    "Severe"
+  ],
+  "label_mapping": {
+    "0": "Mild",
+    "1": "Moderate",
+    "2": "Severe"
+  },
+  "feature_names": [
+    "Age",
+    "Heart_Rate",
+    "Respiratory_Rate",
+    "SpO2",
+    "Temperature",
+    "BP_Systolic",
+    "BP_Diastolic",
+    "Hemoglobin",
+    "WBC",
+    "Platelets",
+    "RDW",
+    "Bilirubin_Total",
+    "Creatinine",
+    "Sex",
+    "Genotype"
+  ],
+  "numeric_features": [
+    "Age",
+    "Heart_Rate",
+    "Respiratory_Rate",
+    "SpO2",
+    "Temperature",
+    "BP_Systolic",
+    "BP_Diastolic",
+    "Hemoglobin",
+    "WBC",
+    "Platelets",
+    "RDW",
+    "Bilirubin_Total",
+    "Creatinine"
+  ],
+  "categorical_features": [
+    "Sex",
+    "Genotype"
+  ],
+  "categorical_options": {
+    "Sex": [
+      "F",
+      "M"
+    ],
+    "Genotype": [
+      "AS",
+      "Negative",
+      "SS"
+    ]
+  },
+  "feature_defaults": {
+    "Age": 19.0,
+    "Heart_Rate": 90.0,
+    "Respiratory_Rate": 20.0,
+    "SpO2": 98.0,
+    "Temperature": 98.6,
+    "BP_Systolic": 110.0,
+    "BP_Diastolic": 70.0,
+    "Hemoglobin": 8.4,
+    "WBC": 7870.0,
+    "Platelets": 251500.0,
+    "RDW": 20.36,
+    "Bilirubin_Total": 4.2,
+    "Creatinine": 0.47000000000000003,
+    "Sex": "F",
+    "Genotype": "SS"
+  },
+  "training_sample_count": 23,
+  "cross_validation": {
+    "method": "RepeatedStratifiedKFold (5 splits, 5 repeats = 25 folds)",
+    "mean_macro_f1": 0.2173,
+    "std_macro_f1": 0.2144,
+    "mean_balanced_accuracy": 0.2667,
+    "std_balanced_accuracy": 0.2449,
+    "mean_accuracy": 0.27,
+    "std_accuracy": 0.2337,
+    "loocv_macro_f1": 0.2573,
+    "loocv_balanced_accuracy": 0.2679,
+    "loocv_accuracy": 0.2609
+  }
+}
