@@ -1,0 +1,57 @@
+======================================================================
+             DATA QUALITY & FIDELITY REPORT: Final SMOTE Dataset (10,000 rows)
+======================================================================
+Real Cohort Size:      23 rows
+Synthetic Cohort Size: 10000 rows
+is_synthetic Column:   Present (all = 1)
+
+[1] EXACT DUPLICATES OF REAL ROWS: 0 (Pass criteria: 0)
+    -> PASS: No synthetic row is an exact replica of any real training patient.
+
+[2] TARGET CLASS BALANCE (Pain_Class):
+    - Severe    :  3334 rows (33.3%)
+    - Mild      :  3333 rows (33.3%)
+    - Moderate  :  3333 rows (33.3%)
+
+[3] CLINICAL BOUNDS & RANGE VERIFICATION:
+    Age               | Real: [   6.0,   57.0] | Synthetic: [   6.0,   56.0] | Bound: [1, 120] -> OK
+    Heart_Rate        | Real: [  68.0,  130.0] | Synthetic: [  68.0,  129.0] | Bound: [40, 220] -> OK
+    Respiratory_Rate  | Real: [  16.0,   33.0] | Synthetic: [  16.0,   32.0] | Bound: [8, 60] -> OK
+    SpO2              | Real: [  92.0,  100.0] | Synthetic: [  92.0,  100.0] | Bound: [50.0, 100.0] -> OK
+    Temperature       | Real: [  97.4,  100.3] | Synthetic: [  97.4,  100.3] | Bound: [92.0, 108.0] -> OK
+    BP_Systolic       | Real: [  90.0,  120.0] | Synthetic: [  90.0,  120.0] | Bound: [60, 240] -> OK
+    BP_Diastolic      | Real: [  54.0,   80.0] | Synthetic: [  54.0,   80.0] | Bound: [30, 140] -> OK
+    Hemoglobin        | Real: [   2.7,   17.5] | Synthetic: [   2.7,   17.5] | Bound: [1.5, 25.0] -> OK
+    WBC               | Real: [3240.0, 23490.0] | Synthetic: [3246.7, 23479.5] | Bound: [1000.0, 60000.0] -> OK
+    Platelets         | Real: [53000.0, 748000.0] | Synthetic: [53364.0, 747522.3] | Bound: [10000.0, 1000000.0] -> OK
+    RDW               | Real: [  13.8,   30.1] | Synthetic: [  13.8,   30.1] | Bound: [8.0, 45.0] -> OK
+    Bilirubin_Total   | Real: [   0.3,   21.2] | Synthetic: [   0.3,   21.2] | Bound: [0.1, 35.0] -> OK
+    Creatinine        | Real: [   0.2,    1.0] | Synthetic: [   0.2,    1.0] | Bound: [0.1, 15.0] -> OK
+    Total Range Violations: 0
+
+[4] CORRELATION MATRIX PRESERVATION (Numeric Features):
+    Frobenius Norm Difference:      0.8752
+    Mean Absolute Correlation Diff: 0.0503
+
+[5] TWO-SAMPLE KOLMOGOROV-SMIRNOV (KS) DISTRIBUTION TEST:
+    (Tests null hypothesis that real and synthetic samples come from the same distribution)
+    Age               | KS Stat: 0.1155 | p-value:   0.8851
+    Heart_Rate        | KS Stat: 0.1469 | p-value:   0.6518
+    Respiratory_Rate  | KS Stat: 0.1272 | p-value:   0.8070
+    SpO2              | KS Stat: 0.1493 | p-value:   0.6324
+    Temperature       | KS Stat: 0.1024 | p-value:   0.9573
+    BP_Systolic       | KS Stat: 0.2085 | p-value:   0.2362
+    BP_Diastolic      | KS Stat: 0.1968 | p-value:   0.2959
+    Hemoglobin        | KS Stat: 0.1287 | p-value:   0.7964
+    WBC               | KS Stat: 0.1546 | p-value:   0.6427
+    Platelets         | KS Stat: 0.1892 | p-value:   0.4205
+    RDW               | KS Stat: 0.1669 | p-value:   0.6400
+    Bilirubin_Total   | KS Stat: 0.3317 | p-value:   0.0365
+    Creatinine        | KS Stat: 0.2807 | p-value:   0.1823
+
+[6] NEAREST-NEIGHBOR DISTANCE TO REAL DATA (Standardized Space):
+    Min Distance to Real Row:    0.0300
+    Median Distance to Real Row: 1.3987
+    Mean Distance to Real Row:   1.4027
+    Max Distance to Real Row:    3.3300
+======================================================================

@@ -1,0 +1,10 @@
+# DISCLAIMER: NOT a valid generalisation estimate: synthetic rows from the same patients appear in both train and test partitions.
+# Never use this table for clinical conclusions or headline model selection.
+Model,Synthetic_Test_Macro_F1,Synthetic_Test_Bal_Acc,Synthetic_Test_Accuracy
+Random Forest,0.9421,0.9424,0.9425
+XGBoost,0.988,0.988,0.988
+SVM,1.0,1.0,1.0
+Logistic Regression,1.0,1.0,1.0
+KNN,1.0,1.0,1.0
+Soft Voting Ensemble,1.0,1.0,1.0
+Stacking Ensemble,1.0,1.0,1.0
